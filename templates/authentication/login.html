@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'autehtication/bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: rgb(10, 4, 2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+body{
+    background-image: url(./icons/background_fon/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.avif);
+    background-attachment: fixed;
+    background-size: cover;
+}
+main{
+    width: 100%;
+    height: 90vh;
+    padding-top: 7%;
+}
+.class_input{
+    padding: 20px 25%;
+    
+}
+p{
+    color: white !important;
+}
+    </style>
+    <title>Online Shop</title>
+</head>
+<body>
+    <main>
+        <div class="container d-flex justify-content-center mb-5 display-3 text-white">Sign up</div>
+            <div class="container-fluid ">
+                <div class="class_input">
+                    <form class="needs-validation was-validated" >
+                        <div class="row mb-3">
+                            <div class="col  mt-2">
+                                <label for="form-input" class="form-label text-white">First name</label>
+                            </div>
+                            <div class="col-9 ">
+                                <input type="text" class="form-control color-primary" id="form-input" placeholder="Adyny giriz" required>
+                            </div>                                
+                            <div class="valid-feedback">
+                                dogry girizildi
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col mt-2">
+                                <label for="form-input" class="form-label text-white">Last name</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="form-input" placeholder="Familyany giriz" required>
+                            </div>
+                            <div class="valid-feedback">
+                                dogry girizildi
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col mt-2">
+                                <label for="form-input" class="form-label text-white">Email</label>
+                            </div>
+                            <div class="col-9">
+                                <div class="input-group">
+                                    <input type="email"  class="form-control" id="form-input" placeholder="Elektron poctany giriz" required>
+                                    <span class="input-group-text bg-info border-info">.com</span>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback">
+                                dogry girizildi
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col mt-2">
+                                <label for="form-input" class="form-label text-white">Password</label>
+                            </div>
+                            <div class="col-9 col-md-9">
+                                <input type="password" class="form-control" id="form-input" placeholder="Sahsy koduny giriz" required>
+                                <p class="form-text">parol azyndan 8 simwoldan ybarat bolmaly</p>
+                            </div>
+                            <div class="invalid-feedback">
+                                dogry girizildi
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="checkbox" class="form-check-input" id="form-input" required>
+                            <label for="form-input" class="form-label text-white">Yatda sakla </label>
+                        </div>
+                            <div class="col-12">
+                                <button class="btn btn-success col-12 text-white" type="submit "><a href="index.html">tassyklamak</a></button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+  
+    <script>
+        (function (){
+            "use strict"
+
+            var forms=document.querySelectorAll('needs-validation')
+
+
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                  form.addEventListener('submit', function (event) {
+                      if(!form.checkValidity()) {
+                          event.preventDefault()
+                          event.stopPropagation()
+                      }
+
+                      form.classList.add('was-validated')
+                  }, false)
+              })
+        }) ()
+    </script>
+</body>
+</html>
